@@ -1,0 +1,4223 @@
+
+
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta http-equiv="Expires" content="86400">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" type="image/png" href="https://www.pokemon.co.jp/common/images/favi_official.ico">
+        <meta name="keyword" content="タイプ,ポケモン,タイプバランス,計算,calc,pokemon,type,のーまです,nomakun_des">
+        <title>POKES RESIST CHECK</title>
+        <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="calc.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="loading.css">
+    </head>
+    <body>
+        <h1>POKES RESIST CHECK</h1>
+        <div id="main">
+            <div>
+                <table>
+                    <tr>
+                        <td colspan="2" rowspan="2">タイプ<br>相性</td>
+                        <td colspan="18" class="complement">攻撃側</td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="nor">
+                            <img src="img/types-icon/nor.png">
+                        </td>
+                        
+                        <td class="fir">
+                            <img src="img/types-icon/fir.png">
+                        </td>
+                        
+                        <td class="wat">
+                            <img src="img/types-icon/wat.png">
+                        </td>
+                        
+                        <td class="ele">
+                            <img src="img/types-icon/ele.png">
+                        </td>
+                        
+                        <td class="gra">
+                            <img src="img/types-icon/gra.png">
+                        </td>
+                        
+                        <td class="ice">
+                            <img src="img/types-icon/ice.png">
+                        </td>
+                        
+                        <td class="fig">
+                            <img src="img/types-icon/fig.png">
+                        </td>
+                        
+                        <td class="poi">
+                            <img src="img/types-icon/poi.png">
+                        </td>
+                        
+                        <td class="gro">
+                            <img src="img/types-icon/gro.png">
+                        </td>
+                        
+                        <td class="fly">
+                            <img src="img/types-icon/fly.png">
+                        </td>
+                        
+                        <td class="psy">
+                            <img src="img/types-icon/psy.png">
+                        </td>
+                        
+                        <td class="bug">
+                            <img src="img/types-icon/bug.png">
+                        </td>
+                        
+                        <td class="roc">
+                            <img src="img/types-icon/roc.png">
+                        </td>
+                        
+                        <td class="gho">
+                            <img src="img/types-icon/gho.png">
+                        </td>
+                        
+                        <td class="dra">
+                            <img src="img/types-icon/dra.png">
+                        </td>
+                        
+                        <td class="dar">
+                            <img src="img/types-icon/dar.png">
+                        </td>
+                        
+                        <td class="ste">
+                            <img src="img/types-icon/ste.png">
+                        </td>
+                        
+                        <td class="fai">
+                            <img src="img/types-icon/fai.png">
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td rowspan="18" class="complement" style="writing-mode: vertical-rl;">防御側</td>
+                        
+                        
+                        
+                        <td class="nor">
+                            <img src="img/types-icon/nor.png" onclick="typeAdd(0)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="nor_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="fir_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="wat_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="ele_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="gra_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="ice_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="fig_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="poi_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="gro_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="fly_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="psy_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="bug_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="roc_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="gho_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="dra_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="dar_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="ste_nor">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="fai_nor">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="fir">
+                            <img src="img/types-icon/fir.png" onclick="typeAdd(1)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="nor_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="fir_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="wat_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="ele_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="gra_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="ice_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="fig_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="poi_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="gro_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="fly_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="psy_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="bug_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="roc_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="gho_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="dra_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="dar_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="ste_fir">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="fai_fir">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="wat">
+                            <img src="img/types-icon/wat.png" onclick="typeAdd(2)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="nor_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="fir_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="wat_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="ele_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="gra_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="ice_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="fig_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="poi_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="gro_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="fly_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="psy_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="bug_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="roc_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="gho_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="dra_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="dar_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="ste_wat">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="fai_wat">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="ele">
+                            <img src="img/types-icon/ele.png" onclick="typeAdd(3)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="nor_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="fir_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="wat_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="ele_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="gra_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="ice_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="fig_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="poi_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="gro_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="fly_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="psy_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="bug_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="roc_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="gho_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="dra_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="dar_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="ste_ele">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="fai_ele">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="gra">
+                            <img src="img/types-icon/gra.png" onclick="typeAdd(4)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="nor_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="fir_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="wat_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="ele_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="gra_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="ice_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="fig_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="poi_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="gro_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="fly_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="psy_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="bug_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="roc_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="gho_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="dra_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="dar_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="ste_gra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="fai_gra">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="ice">
+                            <img src="img/types-icon/ice.png" onclick="typeAdd(5)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="nor_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="fir_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="wat_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="ele_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="gra_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="ice_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="fig_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="poi_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="gro_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="fly_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="psy_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="bug_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="roc_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="gho_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="dra_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="dar_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="ste_ice">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="fai_ice">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="fig">
+                            <img src="img/types-icon/fig.png" onclick="typeAdd(6)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="nor_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="fir_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="wat_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="ele_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="gra_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="ice_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="fig_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="poi_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="gro_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="fly_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="psy_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="bug_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="roc_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="gho_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="dra_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="dar_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="ste_fig">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="fai_fig">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="poi">
+                            <img src="img/types-icon/poi.png" onclick="typeAdd(7)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="nor_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="fir_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="wat_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="ele_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="gra_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="ice_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="fig_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="poi_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="gro_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="fly_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="psy_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="bug_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="roc_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="gho_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="dra_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="dar_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="ste_poi">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="fai_poi">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="gro">
+                            <img src="img/types-icon/gro.png" onclick="typeAdd(8)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="nor_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="fir_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="wat_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="ele_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="gra_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="ice_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="fig_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="poi_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="gro_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="fly_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="psy_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="bug_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="roc_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="gho_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="dra_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="dar_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="ste_gro">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="fai_gro">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="fly">
+                            <img src="img/types-icon/fly.png" onclick="typeAdd(9)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="nor_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="fir_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="wat_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="ele_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="gra_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="ice_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="fig_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="poi_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="gro_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="fly_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="psy_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="bug_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="roc_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="gho_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="dra_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="dar_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="ste_fly">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="fai_fly">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="psy">
+                            <img src="img/types-icon/psy.png" onclick="typeAdd(10)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="nor_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="fir_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="wat_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="ele_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="gra_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="ice_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="fig_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="poi_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="gro_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="fly_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="psy_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="bug_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="roc_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="gho_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="dra_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="dar_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="ste_psy">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="fai_psy">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="bug">
+                            <img src="img/types-icon/bug.png" onclick="typeAdd(11)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="nor_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="fir_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="wat_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="ele_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="gra_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="ice_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="fig_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="poi_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="gro_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="fly_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="psy_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="bug_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="roc_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="gho_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="dra_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="dar_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="ste_bug">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="fai_bug">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="roc">
+                            <img src="img/types-icon/roc.png" onclick="typeAdd(12)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="nor_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="fir_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="wat_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="ele_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="gra_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="ice_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="fig_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="poi_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="gro_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="fly_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="psy_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="bug_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="roc_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="gho_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="dra_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="dar_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="ste_roc">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="fai_roc">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="gho">
+                            <img src="img/types-icon/gho.png" onclick="typeAdd(13)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="nor_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="fir_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="wat_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="ele_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="gra_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="ice_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="fig_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="poi_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="gro_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="fly_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="psy_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="bug_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="roc_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="gho_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="dra_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="dar_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="ste_gho">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="fai_gho">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="dra">
+                            <img src="img/types-icon/dra.png" onclick="typeAdd(14)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="nor_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="fir_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="wat_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="ele_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="gra_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="ice_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="fig_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="poi_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="gro_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="fly_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="psy_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="bug_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="roc_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="gho_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="dra_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="dar_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="ste_dra">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="fai_dra">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="dar">
+                            <img src="img/types-icon/dar.png" onclick="typeAdd(15)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="nor_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="fir_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="wat_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="ele_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="gra_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="ice_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="fig_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="poi_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="gro_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="fly_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="psy_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="bug_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="roc_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="gho_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="dra_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="dar_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="ste_dar">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="fai_dar">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="ste">
+                            <img src="img/types-icon/ste.png" onclick="typeAdd(16)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="nor_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="fir_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="wat_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="ele_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="gra_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="ice_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="fig_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="poi_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="gro_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="fly_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="psy_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="bug_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="roc_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="gho_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="dra_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="dar_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="ste_ste">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="fai_ste">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td class="fai">
+                            <img src="img/types-icon/fai.png" onclick="typeAdd(17)">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="nor_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="fir_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="wat_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="ele_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="gra_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="ice_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="fig_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="poi_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="gro_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="fly_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="psy_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="bug_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="roc_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="gho_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="dra_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="dar_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="ste_fai">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="fai_fai">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+            <div>
+                選択したタイプ一覧
+                <table>
+                    <tr>
+                        <td colspan="2" rowspan="2" id="mytype_no">0 / 2</td>
+                        <td colspan="18" class="complement">攻撃側</td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="nor">
+                            <img src="img/types-icon/nor.png">
+                        </td>
+                        
+                        <td class="fir">
+                            <img src="img/types-icon/fir.png">
+                        </td>
+                        
+                        <td class="wat">
+                            <img src="img/types-icon/wat.png">
+                        </td>
+                        
+                        <td class="ele">
+                            <img src="img/types-icon/ele.png">
+                        </td>
+                        
+                        <td class="gra">
+                            <img src="img/types-icon/gra.png">
+                        </td>
+                        
+                        <td class="ice">
+                            <img src="img/types-icon/ice.png">
+                        </td>
+                        
+                        <td class="fig">
+                            <img src="img/types-icon/fig.png">
+                        </td>
+                        
+                        <td class="poi">
+                            <img src="img/types-icon/poi.png">
+                        </td>
+                        
+                        <td class="gro">
+                            <img src="img/types-icon/gro.png">
+                        </td>
+                        
+                        <td class="fly">
+                            <img src="img/types-icon/fly.png">
+                        </td>
+                        
+                        <td class="psy">
+                            <img src="img/types-icon/psy.png">
+                        </td>
+                        
+                        <td class="bug">
+                            <img src="img/types-icon/bug.png">
+                        </td>
+                        
+                        <td class="roc">
+                            <img src="img/types-icon/roc.png">
+                        </td>
+                        
+                        <td class="gho">
+                            <img src="img/types-icon/gho.png">
+                        </td>
+                        
+                        <td class="dra">
+                            <img src="img/types-icon/dra.png">
+                        </td>
+                        
+                        <td class="dar">
+                            <img src="img/types-icon/dar.png">
+                        </td>
+                        
+                        <td class="ste">
+                            <img src="img/types-icon/ste.png">
+                        </td>
+                        
+                        <td class="fai">
+                            <img src="img/types-icon/fai.png">
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td rowspan="18" class="complement" style="writing-mode: vertical-rl;">防御側</td>
+                        
+                        
+                        
+                        <td id="my_imgbg_0">
+                            <img id="my_img_0" src="img/types-icon/null.png" onclick="typeDel(0)">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_0" id="my_0_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        
+                        
+                        <td id="my_imgbg_1">
+                            <img id="my_img_1" src="img/types-icon/null.png" onclick="typeDel(1)">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="my_bg_1" id="my_1_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                </table>
+                <br>
+                以下のタイプを、半減で受けられません
+                <table>
+                    <tr>
+                        <td colspan="2" rowspan="2"></td>
+                        <td colspan="18" class="complement">防御側</td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="nor">
+                            <img src="img/types-icon/nor.png" onclick="typeAdd(0)">
+                        </td>
+                        
+                        <td class="fir">
+                            <img src="img/types-icon/fir.png" onclick="typeAdd(1)">
+                        </td>
+                        
+                        <td class="wat">
+                            <img src="img/types-icon/wat.png" onclick="typeAdd(2)">
+                        </td>
+                        
+                        <td class="ele">
+                            <img src="img/types-icon/ele.png" onclick="typeAdd(3)">
+                        </td>
+                        
+                        <td class="gra">
+                            <img src="img/types-icon/gra.png" onclick="typeAdd(4)">
+                        </td>
+                        
+                        <td class="ice">
+                            <img src="img/types-icon/ice.png" onclick="typeAdd(5)">
+                        </td>
+                        
+                        <td class="fig">
+                            <img src="img/types-icon/fig.png" onclick="typeAdd(6)">
+                        </td>
+                        
+                        <td class="poi">
+                            <img src="img/types-icon/poi.png" onclick="typeAdd(7)">
+                        </td>
+                        
+                        <td class="gro">
+                            <img src="img/types-icon/gro.png" onclick="typeAdd(8)">
+                        </td>
+                        
+                        <td class="fly">
+                            <img src="img/types-icon/fly.png" onclick="typeAdd(9)">
+                        </td>
+                        
+                        <td class="psy">
+                            <img src="img/types-icon/psy.png" onclick="typeAdd(10)">
+                        </td>
+                        
+                        <td class="bug">
+                            <img src="img/types-icon/bug.png" onclick="typeAdd(11)">
+                        </td>
+                        
+                        <td class="roc">
+                            <img src="img/types-icon/roc.png" onclick="typeAdd(12)">
+                        </td>
+                        
+                        <td class="gho">
+                            <img src="img/types-icon/gho.png" onclick="typeAdd(13)">
+                        </td>
+                        
+                        <td class="dra">
+                            <img src="img/types-icon/dra.png" onclick="typeAdd(14)">
+                        </td>
+                        
+                        <td class="dar">
+                            <img src="img/types-icon/dar.png" onclick="typeAdd(15)">
+                        </td>
+                        
+                        <td class="ste">
+                            <img src="img/types-icon/ste.png" onclick="typeAdd(16)">
+                        </td>
+                        
+                        <td class="fai">
+                            <img src="img/types-icon/fai.png" onclick="typeAdd(17)">
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td rowspan="19" class="complement" style="writing-mode: vertical-rl;" id="conf_rowspan">攻</td>
+                        <td class="" id="conf_null_0">
+                            <img src="img/types-icon/null.png">
+                        </td>
+                        
+                        <td id="conf_null_1"></td>
+                        
+                        <td id="conf_null_2"></td>
+                        
+                        <td id="conf_null_3"></td>
+                        
+                        <td id="conf_null_4"></td>
+                        
+                        <td id="conf_null_5"></td>
+                        
+                        <td id="conf_null_6"></td>
+                        
+                        <td id="conf_null_7"></td>
+                        
+                        <td id="conf_null_8"></td>
+                        
+                        <td id="conf_null_9"></td>
+                        
+                        <td id="conf_null_10"></td>
+                        
+                        <td id="conf_null_11"></td>
+                        
+                        <td id="conf_null_12"></td>
+                        
+                        <td id="conf_null_13"></td>
+                        
+                        <td id="conf_null_14"></td>
+                        
+                        <td id="conf_null_15"></td>
+                        
+                        <td id="conf_null_16"></td>
+                        
+                        <td id="conf_null_17"></td>
+                        
+                        <td id="conf_null_18"></td>
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_0" style="display:none;">
+                        
+                        
+                        <td class="nor">
+                            <img src="img/types-icon/nor.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_0_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_0_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_0_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_0_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_0_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_0_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_0_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_0_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_0_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_0_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_0_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_0_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_0_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_0_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_0_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_0_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_0_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_0_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_1" style="display:none;">
+                        
+                        
+                        <td class="fir">
+                            <img src="img/types-icon/fir.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_1_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_1_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_1_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_1_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_1_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_1_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_1_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_1_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_1_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_1_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_1_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_1_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_1_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_1_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_1_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_1_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_1_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_1_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_2" style="display:none;">
+                        
+                        
+                        <td class="wat">
+                            <img src="img/types-icon/wat.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_2_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_2_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_2_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_2_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_2_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_2_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_2_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_2_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_2_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_2_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_2_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_2_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_2_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_2_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_2_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_2_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_2_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_2_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_3" style="display:none;">
+                        
+                        
+                        <td class="ele">
+                            <img src="img/types-icon/ele.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_3_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_3_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_3_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_3_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_3_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_3_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_3_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_3_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_3_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_3_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_3_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_3_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_3_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_3_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_3_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_3_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_3_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_3_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_4" style="display:none;">
+                        
+                        
+                        <td class="gra">
+                            <img src="img/types-icon/gra.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_4_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_4_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_4_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_4_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_4_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_4_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_4_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_4_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_4_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_4_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_4_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_4_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_4_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_4_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_4_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_4_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_4_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_4_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_5" style="display:none;">
+                        
+                        
+                        <td class="ice">
+                            <img src="img/types-icon/ice.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_5_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_5_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_5_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_5_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_5_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_5_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_5_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_5_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_5_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_5_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_5_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_5_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_5_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_5_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_5_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_5_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_5_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_5_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_6" style="display:none;">
+                        
+                        
+                        <td class="fig">
+                            <img src="img/types-icon/fig.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_6_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_6_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_6_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_6_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_6_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_6_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_6_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_6_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_6_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_6_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_6_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_6_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_6_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_6_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_6_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_6_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_6_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_6_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_7" style="display:none;">
+                        
+                        
+                        <td class="poi">
+                            <img src="img/types-icon/poi.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_7_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_7_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_7_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_7_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_7_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_7_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_7_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_7_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_7_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_7_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_7_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_7_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_7_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_7_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_7_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_7_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_7_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_7_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_8" style="display:none;">
+                        
+                        
+                        <td class="gro">
+                            <img src="img/types-icon/gro.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_8_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_8_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_8_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_8_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_8_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_8_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_8_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_8_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_8_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_8_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_8_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_8_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_8_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_8_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_8_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_8_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_8_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_8_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_9" style="display:none;">
+                        
+                        
+                        <td class="fly">
+                            <img src="img/types-icon/fly.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_9_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_9_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_9_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_9_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_9_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_9_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_9_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_9_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_9_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_9_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_9_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_9_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_9_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_9_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_9_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_9_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_9_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_9_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_10" style="display:none;">
+                        
+                        
+                        <td class="psy">
+                            <img src="img/types-icon/psy.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_10_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_10_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_10_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_10_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_10_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_10_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_10_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_10_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_10_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_10_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_10_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_10_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_10_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_10_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_10_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_10_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_10_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_10_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_11" style="display:none;">
+                        
+                        
+                        <td class="bug">
+                            <img src="img/types-icon/bug.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_11_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_11_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_11_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_11_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_11_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_11_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_11_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_11_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_11_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_11_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_11_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_11_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_11_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_11_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_11_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_11_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_11_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_11_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_12" style="display:none;">
+                        
+                        
+                        <td class="roc">
+                            <img src="img/types-icon/roc.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_12_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_12_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_12_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_12_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_12_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_12_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_12_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_12_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_12_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_12_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_12_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_12_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_12_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_12_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_12_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_12_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_12_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_12_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_13" style="display:none;">
+                        
+                        
+                        <td class="gho">
+                            <img src="img/types-icon/gho.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_13_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_13_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_13_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_13_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_13_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_13_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_13_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_13_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_13_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_13_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_13_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_13_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_13_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_13_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_13_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_13_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_13_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_13_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_14" style="display:none;">
+                        
+                        
+                        <td class="dra">
+                            <img src="img/types-icon/dra.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_14_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_14_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_14_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_14_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_14_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_14_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_14_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_14_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_14_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_14_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_14_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_14_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_14_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_14_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_14_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_14_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_14_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_14_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_15" style="display:none;">
+                        
+                        
+                        <td class="dar">
+                            <img src="img/types-icon/dar.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_15_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_15_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_15_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_15_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_15_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_15_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_15_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_15_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_15_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_15_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_15_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_15_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_15_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_15_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_15_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_15_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_15_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_15_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_16" style="display:none;">
+                        
+                        
+                        <td class="ste">
+                            <img src="img/types-icon/ste.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_16_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_16_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_16_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_16_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_16_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_16_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_16_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_16_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_16_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_16_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_16_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_16_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_16_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_16_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_16_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_16_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_16_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_16_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    <tr id="conf_row_17" style="display:none;">
+                        
+                        
+                        <td class="fai">
+                            <img src="img/types-icon/fai.png">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_nor" id="conf_17_1">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fir" id="conf_17_2">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_wat" id="conf_17_3">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ele" id="conf_17_4">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gra" id="conf_17_5">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ice" id="conf_17_6">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fig" id="conf_17_7">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_poi" id="conf_17_8">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gro" id="conf_17_9">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fly" id="conf_17_10">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_psy" id="conf_17_11">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_bug" id="conf_17_12">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_roc" id="conf_17_13">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_gho" id="conf_17_14">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dra" id="conf_17_15">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_dar" id="conf_17_16">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_ste" id="conf_17_17">
+                        </td>
+                        
+                        
+                        
+                        <td class="row_fai" id="conf_17_18">
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                </table>
+                <div>
+                    <br>
+                    オススメのテラスタイプ(抜群が被らない、弱点を半減以下にできる)
+                    <div class="flex">
+                        
+                        <div class="tooltip">
+                            <span class="tooltip-text" id="TeraType_tl_0">はがね</span>
+                            <img src="img/tera-icon/ste.png" class="TeraType" id="TeraType_0">
+                        </div>
+                        
+                        <div class="tooltip">
+                            <span class="tooltip-text" id="TeraType_tl_1">ドラゴン</span>
+                            <img src="img/tera-icon/dra.png" class="TeraType" id="TeraType_1">
+                        </div>
+                        
+                        <div class="tooltip">
+                            <span class="tooltip-text" id="TeraType_tl_2">ノーマル</span>
+                            <img src="img/tera-icon/nor.png" class="TeraType" id="TeraType_2">
+                        </div>
+                        
+                        <div class="tooltip">
+                            <span class="tooltip-text" id="TeraType_tl_3">みず</span>
+                            <img src="img/tera-icon/wat.png" class="TeraType" id="TeraType_3">
+                        </div>
+                        
+                        <div class="tooltip">
+                            <span class="tooltip-text" id="TeraType_tl_4">フェアリー</span>
+                            <img src="img/tera-icon/fai.png" class="TeraType" id="TeraType_4">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <DIV>
+                <div>
+                    <a id="info_button" class="word_button" onclick="info_display()">
+                        <h2 id="info_title">#このサイトについて ▲</h2>
+                    </a>
+                    <div id="info" style="display:block;">
+                        ポケモンのタイプからオススメのテラスタイプを調べるサイトです。<br>
+                        「#~▼」、「#~▲」はクリックすることで表示を切り替えることができます。<br>
+                        <br>
+                        左のテーブル：メインテーブル<br>
+                        右上のテーブル：マイテーブル<br>
+                        右下のテーブル：半減不可テーブル<br>
+                        <br>
+                        メインテーブルは、全タイプが表示されているテーブルです。<br>
+                        &emsp;タイプ相性を確認する際に使用してください。<br>
+                        マイテーブルは、自分のタイプのみを表示するテーブルです。<br>
+                        &emsp;相性を確認することができます。<br>
+                        半減不可テーブルは、マイテーブルにあるタイプに等倍以上を出せるタイプが表示されています。<br>
+                        &emsp;攻守が反転しているため相性のよいタイプが分かりやすくなっています。<br>
+                        <br>
+                        メインテーブルの「防御側」のタイプアイコン、または<br>
+                        半減不可テーブルの「防御側」のタイプアイコンをクリックすることで<br>
+                        マイテーブルにタイプを4つまで表示できます。<br>
+                        <br>
+                        マイテーブルの「防御側」のタイプアイコンをクリックすることで非表示にできます。<br>
+                    </div>
+                </div>
+            </DIV>
+
+            <div class="spacer"></div>
+            <div>
+                Thx to <a href="https://tobiasahlin.com/spinkit/" target="_blank">spinkit</a><br>
+                Made by <a href="https://twitter.com/nomakun_des" target="_blank">@nomakun_des</a><br>
+                v1.00.0 <a href="update.html" target="_blank">Update Details</a>
+            </div>
+        </div>
+
+
+        <div id="loader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+    </body>
+</html>
